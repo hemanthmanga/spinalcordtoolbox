@@ -5,7 +5,7 @@ on: [push, pull_request]
     # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#onschedule
     # > Scheduled workflows run on the latest commit on the default or base branch
     # i.e. this can only run on master
-    - cron:  '0 11 * * *'
+   ### - cron:  '0 11 * * *'
 
 # The set of available runners on Github's infra is generous but
 # will never be complete: https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on

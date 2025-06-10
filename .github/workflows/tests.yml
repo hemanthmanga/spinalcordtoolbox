@@ -335,7 +335,8 @@ jobs:
       run: |
         # NB: this one needs sudo, so the global DEBIAN_FRONTEND doesn't get through.
         # NB: mesa-utils is needed for PyQT testing (https://github.com/Microsoft/WSL/issues/1246#issuecomment-356425862)
-        sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install -y gcc git curl mesa-utils
+        sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install -y gcc git curl mesa-utils \
+          libgl1-mesa-glx libegl1-mesa libxkbcommon-x11 libqt5widgets5
     - uses: actions/checkout@v4
     - name: Copy SCT from $GITHUB_WORKSPACE to ~
       run: |
@@ -389,7 +390,8 @@ jobs:
       run: |
         # NB: this one needs sudo, so the global DEBIAN_FRONTEND doesn't get through.
         # NB: mesa-utils is needed for PyQT testing (https://github.com/Microsoft/WSL/issues/1246#issuecomment-356425862)
-        sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install -y gcc git curl mesa-utils
+        sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install -y gcc git curl mesa-utils \
+          libgl1-mesa-glx libegl1-mesa libxkbcommon-x11 libqt5widgets5
     - uses: actions/checkout@v4
     - name: Copy SCT from $GITHUB_WORKSPACE to ~
       run: |
